@@ -14,18 +14,12 @@ router.get('/', function(req, res, next) {
   res.json({
       status: 'ok',
       time: Date.now(),
-      news: [
-          {uid: 1003, name: 'Wolf Forest', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1004, name: 'Simon Fawkes', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1005, name: 'Jarrod Samms', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1003, name: 'Wolf Forest', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1004, name: 'Simon Fawkes', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1005, name: 'Jarrod Samms', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1003, name: 'Wolf Forest', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1004, name: 'Simon Fawkes', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1005, name: 'Jarrod Samms', action: actions[Math.floor(Math.random()*actions.length)]},
+      friends: [
+          {uid: 1003, name: 'Wolf Forest', ava: 'https://forest-app.herokuapp.com/images/ava1.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
+          {uid: 1004, name: 'Simon Fawkes', ava: 'https://forest-app.herokuapp.com/images/ava2.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
+          {uid: 1005, name: 'Jarrod Samms', ava: 'https://forest-app.herokuapp.com/images/ava3.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
       ],
-      messages: [
+      news: [
           {uid: 1003, from: 'Wolf Forest', title: 'Title 1', body: 'Some body message', image: 'https://forest-app.herokuapp.com/images/nature1.jpg'},
           {uid: 1003, from: 'Wolf Forest', title: 'Title 2', body: 'Some body message', image: 'https://forest-app.herokuapp.com/images/nature2.jpg'},
           {uid: 1003, from: 'Wolf Forest', title: 'Title 3', body: 'Some body message', image: 'https://forest-app.herokuapp.com/images/nature3.jpg'},
