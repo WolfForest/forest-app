@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
       ],
       profile: {
           ava: 'https://forest-app.herokuapp.com/images/ys5wPIBu_400x400.jpg',
-          bg: 'https://forest-app.herokuapp.com/images/hellboy_and_werewolf_w1.jpeg',
+          bg: 'https://forest-app.herokuapp.com/images/bg1.jpg',
           name: 'Wolf Forest'
       }
   });
