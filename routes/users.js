@@ -16,8 +16,8 @@ var statuses = [
         var m = Math.random()*-1000;
         var d = new Date();
         d.setMinutes(m);
-        return d.toDateString()
-    })+' the last visit',
+        return d.toLocaleTimeString()
+    })()+' the last visit',
 ];
 
 /* GET users listing. */
