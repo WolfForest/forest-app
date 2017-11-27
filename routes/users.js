@@ -9,15 +9,44 @@ var actions = [
     'growl at the friend',
 ];
 
+var statuses = [
+    'Online',
+    'Busy',
+    'Offline, '+(function () {
+        var m = Math.random()*-1000;
+        var d = new Date();
+        d.setMinutes(m);
+        return d.toDateString()
+    })+' the last visit',
+];
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.json({
       status: 'ok',
       time: Date.now(),
       friends: [
-          {uid: 1003, name: 'Wolf Forest', ava: 'https://forest-app.herokuapp.com/images/ava1.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1004, name: 'Simon Fawkes', ava: 'https://forest-app.herokuapp.com/images/ava2.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
-          {uid: 1005, name: 'Jarrod Samms', ava: 'https://forest-app.herokuapp.com/images/ava3.jpg', action: actions[Math.floor(Math.random()*actions.length)]},
+          {
+              uid: 1003,
+              name: 'Wolf Forest',
+              ava: 'https://forest-app.herokuapp.com/images/ava1.jpg',
+              action: actions[Math.floor(Math.random()*actions.length)],
+              status: statuses[Math.floor(Math.random()*statuses.length)],
+          },
+          {
+              uid: 1004,
+              name: 'Simon Fawkes',
+              ava: 'https://forest-app.herokuapp.com/images/ava2.jpg',
+              action: actions[Math.floor(Math.random()*actions.length)],
+              status: statuses[Math.floor(Math.random()*statuses.length)],
+          },
+          {
+              uid: 1005,
+              name: 'Jarrod Samms',
+              ava: 'https://forest-app.herokuapp.com/images/ava3.jpg',
+              action: actions[Math.floor(Math.random()*actions.length)],
+              status: statuses[Math.floor(Math.random()*statuses.length)],
+          },
       ],
       news: [
           {uid: 1003, from: 'Wolf Forest', title: 'Title 1', body: 'Some body message', image: 'https://forest-app.herokuapp.com/images/nature1.jpg'},
