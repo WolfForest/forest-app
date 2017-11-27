@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   res.json({
       status: 'ok',
       time: Date.now(),
-      list: [
+      news: [
           {uid: 1003, name: 'Wolf Forest', action: actions[Math.floor(Math.random()*actions.length)]},
           {uid: 1004, name: 'Simon Fawkes', action: actions[Math.floor(Math.random()*actions.length)]},
           {uid: 1005, name: 'Jarrod Samms', action: actions[Math.floor(Math.random()*actions.length)]},
@@ -24,6 +24,9 @@ router.get('/', function(req, res, next) {
           {uid: 1003, name: 'Wolf Forest', action: actions[Math.floor(Math.random()*actions.length)]},
           {uid: 1004, name: 'Simon Fawkes', action: actions[Math.floor(Math.random()*actions.length)]},
           {uid: 1005, name: 'Jarrod Samms', action: actions[Math.floor(Math.random()*actions.length)]},
+      ],
+      messages: [
+          {uid: 1003, from: 'Wolf Forest', title: 'Title', body: 'Some body message'},
       ],
       profile: {
           ava: 'https://forest-app.herokuapp.com/images/ys5wPIBu_400x400.jpg',
